@@ -28,7 +28,7 @@ const HeroSection = () => {
           
           <div className={styles.nameContainer}>
             <h1 className={styles.name}>
-              I'm <span className={styles.nameHighlight}>Safet</span>
+              I'm <span className={styles.nameHighlight}>Mueez</span>
             </h1>
             <h2 className={styles.role}>React.js Developer</h2>
           </div>
@@ -60,15 +60,6 @@ const HeroSection = () => {
               whileHover={{ y: -3, color: '#e50914' }}
             >
               <FiGithub />
-            </motion.a>
-            <motion.a
-              href="https://behance.net"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialIcon}
-              whileHover={{ y: -3, color: '#e50914' }}
-            >
-              <FaBehance />
             </motion.a>
           </div>
         </motion.div>

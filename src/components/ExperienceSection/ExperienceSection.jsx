@@ -12,9 +12,9 @@ const ExperienceSection = () => {
     {
       type: 'education',
       icon: <FiBook />,
-      institution: 'University of Technology',
+      institution: 'NFC University',
       degree: 'BS in Software Engineering',
-      status: '7th Semester',
+      status: '8th Semester',
       duration: '2022 – Present',
       coursework: [
         'Data Structures & Algorithms',

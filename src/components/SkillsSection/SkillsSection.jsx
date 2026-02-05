@@ -33,7 +33,6 @@ const SkillsSection = () => {
       title: 'Backend',
       icon: <FiServer />,
       skills: [
-        { name: 'PHP', level: 75 },
         { name: 'Node.js', level: 70 },
         { name: 'MySQL', level: 78 },
       ],
@@ -54,7 +53,6 @@ const SkillsSection = () => {
       skills: [
         { name: 'APIs', level: 80 },
         { name: 'Responsive Design', level: 92 },
-        { name: 'SEO Basics', level: 70 },
       ],
     },
   ];

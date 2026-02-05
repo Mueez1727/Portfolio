@@ -99,13 +99,13 @@ const AboutSection = () => {
                   className={styles.focusItem}
                   initial={{ y: 20, opacity: 0 }}
                   animate={isInView ? { y: 0, opacity: 1 } : {}}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                   whileHover={{ x: 5 }}
                 >
                   <div className={styles.focusIcon}>{item.icon}</div>
                   <div className={styles.focusText}>
                     <span className={styles.focusTitle}>{item.title}</span>
-                    <span className={styles.focusDesc}>{item.desc}</span>
+                    <span className={styles.focusDesc}> {item.desc}</span>
                   </div>
                 </motion.div>
               ))}

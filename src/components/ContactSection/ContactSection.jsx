@@ -49,26 +49,26 @@ const ContactSection = () => {
     {
       icon: <FiMail />,
       label: 'Email',
-      value: 'safet@example.com',
-      href: 'mailto:safet@example.com',
+      value: 'mueezahmad1727@gmail.com',
+      href: 'mailto:mueezahmad1727@gmail.com',
     },
     {
       icon: <FiPhone />,
       label: 'Phone',
-      value: '+1 234 567 890',
-      href: 'tel:+1234567890',
+      value: '+92 336 6211911',
+      href: 'tel:+923366211911',
     },
     {
       icon: <FiMapPin />,
       label: 'Location',
-      value: 'City, Country',
+      value: 'Khanewal, Pakistan',
       href: null,
     },
   ];
 
   const socialLinks = [
-    { icon: <FiGithub />, href: 'https://github.com', label: 'GitHub' },
-    { icon: <FiLinkedin />, href: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: <FiGithub />, href: 'https://github.com/Mueez1727', label: 'GitHub' },
+    { icon: <FiLinkedin />, href: 'https://www.linkedin.com/in/mueez-ahmad-bab574352/', label: 'LinkedIn' },
   ];
 
   return (
