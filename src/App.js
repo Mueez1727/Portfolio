@@ -45,7 +45,7 @@ function App() {
         <footer className={styles.footer}>
           <div className={styles.footerContent}>
             <p className={styles.footerText}>
-              © {new Date().getFullYear()} Safet. Built with{' '}
+              © {new Date().getFullYear()} IMueez. Built with me{' '}
               <span className={styles.footerHeart}>♥</span> using React
             </p>
           </div>
