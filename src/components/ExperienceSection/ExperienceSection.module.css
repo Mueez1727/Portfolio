@@ -2,8 +2,9 @@
   position: relative;
   min-height: 100vh;
   padding: 120px 50px;
-  background: linear-gradient(180deg, #0f0f0f 0%, #151515 100%);
+  background: linear-gradient(180deg, var(--gradient-end) 0%, var(--bg-section) 100%);
   overflow: hidden;
+  transition: background 0.3s ease;
 }
 
 .container {
@@ -27,7 +28,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #e50914;
+  color: var(--accent-red);
   margin-bottom: 15px;
 }
 
@@ -36,19 +37,21 @@
   content: '';
   width: 20px;
   height: 2px;
-  background: #e50914;
+  background: var(--accent-red);
 }
 
 .mainHeading {
   font-size: 42px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 15px;
+  transition: color 0.3s ease;
 }
 
 .subHeading {
   font-size: 16px;
-  color: #888;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
 }
 
 .timeline {
@@ -65,7 +68,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, #e50914 0%, rgba(229, 9, 20, 0.2) 100%);
+  background: linear-gradient(180deg, var(--accent-red) 0%, rgba(229, 9, 20, 0.2) 100%);
   transform: translateX(-50%);
 }
 
@@ -90,10 +93,11 @@
   top: 30px;
   width: 16px;
   height: 16px;
-  background: #e50914;
+  background: var(--accent-red);
   border-radius: 50%;
-  border: 3px solid #0f0f0f;
+  border: 3px solid var(--bg-section);
   z-index: 2;
+  transition: border-color 0.3s ease;
 }
 
 .timelineItem:nth-child(even) .timelineDot {
@@ -102,11 +106,11 @@
 }
 
 .timelineCard {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--bg-card);
   backdrop-filter: blur(20px);
   border-radius: 20px;
   padding: 35px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-soft);
   width: 100%;
   transition: all 0.3s ease;
 }
@@ -114,7 +118,7 @@
 .timelineCard:hover {
   transform: translateY(-5px);
   border-color: rgba(229, 9, 20, 0.2);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px var(--shadow-color);
 }
 
 .cardHeader {
@@ -134,7 +138,7 @@
   justify-content: center;
   background: rgba(229, 9, 20, 0.1);
   border-radius: 12px;
-  color: #e50914;
+  color: var(--accent-red);
   font-size: 22px;
   margin-bottom: 15px;
 }
@@ -142,14 +146,16 @@
 .institutionName {
   font-size: 20px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 8px;
+  transition: color 0.3s ease;
 }
 
 .degree {
   font-size: 16px;
-  color: #b3b3b3;
+  color: var(--text-secondary);
   margin-bottom: 12px;
+  transition: color 0.3s ease;
 }
 
 .statusBadge {
@@ -160,22 +166,24 @@
   border-radius: 20px;
   font-size: 13px;
   font-weight: 600;
-  color: #e50914;
+  color: var(--accent-red);
 }
 
 .duration {
   font-size: 14px;
-  color: #666;
+  color: var(--text-muted);
   margin-bottom: 20px;
+  transition: color 0.3s ease;
 }
 
 .courseworkTitle {
   font-size: 14px;
   font-weight: 600;
-  color: #888;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 12px;
+  transition: color 0.3s ease;
 }
 
 .courseworkTags {
@@ -186,18 +194,18 @@
 
 .courseworkTag {
   padding: 8px 14px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-soft);
   font-size: 13px;
-  color: #b3b3b3;
+  color: var(--text-secondary);
   transition: all 0.3s ease;
 }
 
 .courseworkTag:hover {
   background: rgba(229, 9, 20, 0.1);
   border-color: rgba(229, 9, 20, 0.3);
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 @media (max-width: 900px) {

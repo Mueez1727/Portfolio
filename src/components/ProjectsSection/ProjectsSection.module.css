@@ -2,8 +2,9 @@
   position: relative;
   min-height: 100vh;
   padding: 120px 50px;
-  background: linear-gradient(180deg, #0b0b0b 0%, #121212 100%);
+  background: linear-gradient(180deg, var(--gradient-start) 0%, var(--bg-section) 100%);
   overflow: hidden;
+  transition: background 0.3s ease;
 }
 
 .container {
@@ -27,7 +28,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #e50914;
+  color: var(--accent-red);
   margin-bottom: 15px;
 }
 
@@ -36,19 +37,21 @@
   content: '';
   width: 20px;
   height: 2px;
-  background: #e50914;
+  background: var(--accent-red);
 }
 
 .mainHeading {
   font-size: 42px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 15px;
+  transition: color 0.3s ease;
 }
 
 .subHeading {
   font-size: 16px;
-  color: #888;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
 }
 
 .projectsGrid {
@@ -58,18 +61,18 @@
 }
 
 .projectCard {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--bg-card);
   backdrop-filter: blur(20px);
   border-radius: 24px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-soft);
   transition: all 0.4s ease;
 }
 
 .projectCard:hover {
   transform: translateY(-8px);
   border-color: rgba(229, 9, 20, 0.2);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 25px 50px var(--shadow-color);
 }
 
 .imageWrapper {
@@ -109,7 +112,7 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  background: #e50914;
+  background: var(--accent-red);
   color: #fff;
   padding: 6px 14px;
   border-radius: 20px;
@@ -126,15 +129,17 @@
 .projectTitle {
   font-size: 22px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 12px;
+  transition: color 0.3s ease;
 }
 
 .projectDescription {
   font-size: 15px;
   line-height: 1.7;
-  color: #999;
+  color: var(--text-muted);
   margin-bottom: 20px;
+  transition: color 0.3s ease;
 }
 
 .techTags {
@@ -149,17 +154,18 @@
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-soft);
   font-size: 13px;
-  color: #b3b3b3;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
 }
 
 .techDot {
   width: 6px;
   height: 6px;
-  background: #e50914;
+  background: var(--accent-red);
   border-radius: 50%;
 }
 
@@ -182,19 +188,19 @@
 
 .primaryLink {
   background: transparent;
-  border: 2px solid #e50914;
-  color: #e50914;
+  border: 2px solid var(--accent-red);
+  color: var(--accent-red);
 }
 
 .primaryLink:hover {
-  background: #e50914;
+  background: var(--accent-red);
   color: #fff;
 }
 
 .secondaryLink {
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
+  border: 2px solid var(--border-medium);
+  color: var(--text-primary);
 }
 
 .secondaryLink:hover {

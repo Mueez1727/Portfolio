@@ -10,28 +10,31 @@
   padding: 0 50px;
   z-index: 100;
   background: transparent;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .navbar.scrolled {
-  background: rgba(11, 11, 11, 0.95);
+  background: var(--navbar-bg);
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .logo {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-card-hover));
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--border-medium);
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .logoIcon {
-  color: #fff;
+  color: var(--text-primary);
   font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 .navLinks {
@@ -42,7 +45,7 @@
 
 .navItem {
   position: relative;
-  color: #b3b3b3;
+  color: var(--text-secondary);
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -51,23 +54,28 @@
 }
 
 .navItem:hover {
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .navItem.active {
-  color: #fff;
+  color: var(--text-primary);
 }
 
-.navItem.active::after {
+.navItem::after {
   content: '';
   position: absolute;
   bottom: -5px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0);
   width: 6px;
   height: 6px;
-  background: #e50914;
+  background: var(--accent-red);
   border-radius: 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.navItem.active::after {
+  transform: translateX(-50%) scale(1);
 }
 
 .rightSection {
@@ -81,18 +89,19 @@
   height: 40px;
   border-radius: 50%;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-medium);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .themeToggle:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: var(--bg-card);
+  border-color: var(--accent-red);
+  color: var(--accent-red);
 }
 
 .menuButton {
@@ -101,12 +110,13 @@
   height: 40px;
   border-radius: 8px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-medium);
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 20px;
+  transition: all 0.3s ease;
 }
 
 .mobileMenu {
@@ -115,12 +125,13 @@
   top: 70px;
   left: 0;
   width: 100%;
-  background: rgba(11, 11, 11, 0.98);
+  background: var(--navbar-bg);
   backdrop-filter: blur(20px);
   padding: 30px;
   flex-direction: column;
   gap: 20px;
   z-index: 99;
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .mobileMenu.open {
@@ -128,17 +139,31 @@
 }
 
 .mobileNavItem {
-  color: #b3b3b3;
+  position: relative;
+  color: var(--text-secondary);
   font-size: 16px;
   font-weight: 500;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--border-soft);
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .mobileNavItem:hover,
 .mobileNavItem.active {
-  color: #fff;
+  color: var(--text-primary);
+}
+
+.mobileNavItem.active::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--accent-red);
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
-import { FaBehance } from 'react-icons/fa';
 import BackgroundNetwork from '../BackgroundNetwork';
+import heroImage from '../../assets/images/hero-profile.png';
 import styles from './HeroSection.module.css';
 
 const HeroSection = () => {
@@ -44,22 +44,22 @@ const HeroSection = () => {
 
           <div className={styles.socialLinks}>
             <motion.a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialIcon}
-              whileHover={{ y: -3, color: '#e50914' }}
-            >
-              <FiLinkedin />
-            </motion.a>
-            <motion.a
-              href="https://github.com"
+              href="https://github.com/Mueez1727"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialIcon}
               whileHover={{ y: -3, color: '#e50914' }}
             >
               <FiGithub />
+            </motion.a>
+            <motion.a
+              href="https://www.linkedin.com/in/mueez-ahmad-bab574352/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialIcon}
+              whileHover={{ y: -3, color: '#e50914' }}
+            >
+              <FiLinkedin />
             </motion.a>
           </div>
         </motion.div>
@@ -73,7 +73,7 @@ const HeroSection = () => {
           <div className={styles.imageContainer}>
             <div className={styles.imageGlow}></div>
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face"
+              src={heroImage}
               alt="Profile"
               className={styles.profileImage}
             />

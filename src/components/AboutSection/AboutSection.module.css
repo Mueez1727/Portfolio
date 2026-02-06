@@ -2,8 +2,9 @@
   position: relative;
   min-height: 100vh;
   padding: 120px 50px;
-  background: linear-gradient(180deg, #0e0e0e 0%, #111111 100%);
+  background: linear-gradient(180deg, var(--gradient-end) 0%, var(--bg-section) 100%);
   overflow: hidden;
+  transition: background 0.3s ease;
 }
 
 .container {
@@ -31,32 +32,35 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #e50914;
+  color: var(--accent-red);
 }
 
 .sectionLabel::after {
   content: '';
   width: 30px;
   height: 2px;
-  background: #e50914;
+  background: var(--accent-red);
 }
 
 .mainHeading {
   font-size: 42px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-primary);
   line-height: 1.2;
+  transition: color 0.3s ease;
 }
 
 .paragraph {
   font-size: 16px;
   line-height: 1.8;
-  color: #b3b3b3;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
 }
 
 .highlightText {
-  color: #ffffff;
+  color: var(--text-primary);
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .specializationList {
@@ -70,12 +74,13 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #b3b3b3;
+  color: var(--text-secondary);
   font-size: 15px;
+  transition: color 0.3s ease;
 }
 
 .checkIcon {
-  color: #e50914;
+  color: var(--accent-red);
   font-size: 18px;
 }
 
@@ -85,30 +90,30 @@
 }
 
 .highlightCard {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
   backdrop-filter: blur(20px);
   border-radius: 24px;
   padding: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 
-    0 0 40px rgba(128, 0, 255, 0.05),
-    inset 0 0 40px rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 0 40px var(--shadow-glow);
   width: 100%;
   max-width: 380px;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cardTitle {
   font-size: 18px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 25px;
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: color 0.3s ease;
 }
 
 .cardTitleIcon {
-  color: #e50914;
+  color: var(--accent-red);
 }
 
 .focusItems {
@@ -122,14 +127,14 @@
   align-items: center;
   gap: 15px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--bg-card);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-soft);
   transition: all 0.3s ease;
 }
 
 .focusItem:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-card-hover);
   border-color: rgba(229, 9, 20, 0.2);
   transform: translateX(5px);
 }
@@ -142,7 +147,7 @@
   justify-content: center;
   background: rgba(229, 9, 20, 0.1);
   border-radius: 10px;
-  color: #e50914;
+  color: var(--accent-red);
   font-size: 18px;
 }
 
@@ -153,13 +158,15 @@
 .focusTitle {
   font-size: 15px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
 }
 
 .focusDesc {
   font-size: 13px;
-  color: #888;
+  color: var(--text-muted);
   margin-top: 2px;
+  transition: color 0.3s ease;
 }
 
 @media (max-width: 1024px) {
