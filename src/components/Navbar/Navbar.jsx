@@ -17,7 +17,7 @@ const Navbar = () => {
   // Initialize theme on mount
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
-  }, []);
+  }, [isDarkMode]);
 
   // Handle scroll for navbar background
   useEffect(() => {
